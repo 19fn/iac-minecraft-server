@@ -1,1 +1,1 @@
-# minecraft-server
+# Using Terraform and Azure to build & host Minecraft Server 1.20.1
