@@ -58,3 +58,9 @@ variable "ip_name" {
   description = "# name."
 }
 
+variable "myip" {
+  type = string
+}
+
+
+
