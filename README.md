@@ -5,7 +5,7 @@
 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Basic Installation](#basic-installation)
+  - [Architecture](#architecture)
 - [Az CLI Script](#about-planet-argon)
 
 </details>
@@ -18,7 +18,10 @@
 - `az cli` should be installed
 - `git` should be installed (recommended v2.4.11 or higher)
 
-### Basic Installation
+### Architecture
+
+<img src="https://learn.microsoft.com/en-us/gaming/azure/reference-architectures/media/multiplayer/multiplayer-basic-game-server-hosting.png" width="700" height="400" alt="archicture">
+
  You should first sing in Azure
 
  Use: az login 
