@@ -1,4 +1,4 @@
-# Use Terraform and Azure to host Minecraft Server
+# Use Terraform to build the infrastructure needed to host a Minecraft Server
 
 <details>
 <summary>Table of Contents</summary>
