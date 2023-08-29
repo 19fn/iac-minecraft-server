@@ -1,4 +1,4 @@
-# Use Terraform and Azure to build & host Minecraft Server
+# Use Terraform and Azure to host Minecraft Server
 
 <details>
 <summary>Table of Contents</summary>
@@ -14,27 +14,35 @@
 
 ### Prerequisites
 
-- A Azure subscription and existing resource group.
+- An active Azure subscription.
 - `az cli` should be installed
-- `git` should be installed (recommended v2.4.11 or higher)
 
 ### Architecture
 
 <img src="https://learn.microsoft.com/en-us/gaming/azure/reference-architectures/media/multiplayer/multiplayer-basic-game-server-hosting.png" width="700" height="400" alt="archicture">
 
- You should first sing in Azure
+We'll follow the architecture in the diagram using Terraform.
 
- Use: az login 
+First, we should sign in to Azure
+```
+# sign in interactively
+az login
 
- You should export you public ip to access maitenenace port
- export TF_VAR_myip=my-public-ip
- 
- Then, we need to run Terraform's commands
+# if you have more than one subscription
+az account set --subscription="SUBSCRIPTION_ID"
+```
+At this point running either ```terraform plan``` or ```terraform apply``` should allow Terraform to run using the Azure CLI to authenticate.
 
- terraform init
+Also, you should export your Public IP in order to access the maintenance port.
+```
+# to get public ip: curl ifconfig.me
+export TF_VAR_myip=my-public-ip
 
- terraform valide 
-
- terraform plan
-
- terraform apply
+# or in one step
+export TF_VAR_myip=$(curl ifconfig.me) 
+```
+ Then, we need to apply the Terraform configuration.
+```
+# to create the infrastructure
+terraform apply
+```
